@@ -1,6 +1,6 @@
 package github.ayratis.tpvm.navigation
 
-class Router {
+open class Router {
 
     var navigator: Navigator? = null
         private set
@@ -13,11 +13,11 @@ class Router {
         navigator = null
     }
 
-    fun navigate(action: Int) {
+    open fun navigate(action: Int) {
         navigator?.navigate(action)
     }
 
-    fun exit() {
+    open fun exit() {
         navigator?.exit()
     }
 }
